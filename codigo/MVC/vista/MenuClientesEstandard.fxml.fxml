@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grupofp.controlador.MenuClientesEstandardController">
+   <children>
+      <Pane fx:id="paneInsertarEstandard" layoutX="119.0" layoutY="127.0" prefHeight="200.0" prefWidth="330.0" visible="false">
+         <children>
+            <TextField fx:id="txtNIF" layoutX="33.0" layoutY="14.0" />
+            <TextField fx:id="txtNombre" layoutX="33.0" layoutY="57.0" />
+            <TextField fx:id="txtDomicilio" layoutX="33.0" layoutY="100.0" />
+            <TextField fx:id="txtEmail" layoutX="33.0" layoutY="147.0" />
+            <Label layoutX="227.0" layoutY="18.0" text="NIF" />
+            <Label layoutX="216.0" layoutY="61.0" text="nombre" />
+            <Label layoutX="212.0" layoutY="104.0" text="domicilio" />
+            <Label layoutX="222.0" layoutY="151.0" text="email" />
+         </children>
+      </Pane>
+      <Button fx:id="botoInsertarE" layoutX="488.0" layoutY="237.0" mnemonicParsing="false" onAction="#insertarE" text="INSERTAR" visible="false" />
+      <Label fx:id="menuArticles" layoutX="193.0" layoutY="14.0" text="Gestió Clients Estandard">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="botoInsertarClienteE" layoutX="45.0" layoutY="50.0" mnemonicParsing="false" onAction="#añadirClienteE" text="Insertar Article">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="botoEliminarE" layoutX="241.0" layoutY="50.0" mnemonicParsing="false" onAction="#eliminarClienteE" text="Eliminar Article">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="botoMostrarClientesE" layoutX="438.0" layoutY="50.0" mnemonicParsing="false" onAction="#mostrarClientesE" text="Mostrar Articles">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Pane fx:id="paneEliminar" layoutX="210.0" layoutY="158.0" onDragDetected="#eliminarClienteE" prefHeight="99.0" prefWidth="200.0" visible="false">
+         <children>
+            <TextField fx:id="txtNIF2" layoutX="26.0" layoutY="43.0" />
+            <Label layoutX="91.0" layoutY="14.0" text="NIF" />
+         </children>
+      </Pane>
+      <Button fx:id="botoEliminar" layoutX="281.0" layoutY="302.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" visible="false" />
+      <TableView fx:id="taulaClientesE" layoutX="108.0" layoutY="127.0" prefHeight="200.0" prefWidth="397.0" visible="false">
+         <columns>
+            <TableColumn fx:id="colNombre" prefWidth="99.0" text="Nombre" />
+            <TableColumn fx:id="colNIF" prefWidth="98.0" text="NIF" />
+            <TableColumn fx:id="colDomicilio" prefWidth="89.0" text="Domicilio" />
+            <TableColumn fx:id="colEmail" prefWidth="109.0" text="Email" />
+         </columns>
+      </TableView>
+      <Button fx:id="botoSortirTaula" layoutX="284.0" layoutY="353.0" mnemonicParsing="false" onAction="#sortirTaulaClientesE" text="Sortir" visible="false" />
+   </children>
+</AnchorPane>
